@@ -15,7 +15,7 @@
 
 name: Build
 on:
-  # Trigger the workflow on push to master
+  # Trigger the workflow on pushes to only the 'master' branch (this avoids duplicate checks being run e.g. for dependabot pull requests)
   push:
     branches: [master]
   # Trigger the workflow on any pull request
@@ -72,14 +72,6 @@ jobs:
       # Run tests
       - name: Run Tests
         run: ./gradlew test
-
-      # Upload code coverage report
-      - name: CodeCov Upload
-        uses: codecov/codecov-action@v1.5.2
-        timeout-minutes: 10
-        with:
-          file: build/reports/jacoco/test/jacocoTestReport.xml
-          fail_ci_if_error: true # fail the build if upload to codecov.io fails
 
       # Run verifyPlugin Gradle task
       - name: Verify Plugin

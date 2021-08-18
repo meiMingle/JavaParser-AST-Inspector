@@ -12,9 +12,6 @@ plugins {
     id("org.jetbrains.intellij") version "1.1.4"
     // gradle-changelog-plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
     id("org.jetbrains.changelog") version "1.2.1"
-
-
-    id("jacoco")
 }
 
 group = properties("pluginGroup")
@@ -117,27 +114,5 @@ tasks {
         // Specify pre-release label to publish the plugin in a custom Release Channel automatically. Read more:
         // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
         channels.set(listOf(properties("pluginVersion").split('-').getOrElse(1) { "default" }.split('.').first()))
-    }
-}
-
-tasks.jacocoTestReport {
-
-    reports {
-        xml.required.set(true)
-        csv.required.set(true)
-        html.required.set(true)
-    }
-}
-
-// https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html
-// https://docs.gradle.org/current/userguide/java_testing.html#using_junit5
-tasks.test {
-    // enable JUnit Platform (a.k.a. JUnit 5) support
-    useJUnitPlatform()
-
-    finalizedBy("jacocoTestReport")
-    doLast {
-        logger.info("View code coverage at:")
-        logger.info("file://$buildDir/reports/jacoco/test/html/index.html")
     }
 }
