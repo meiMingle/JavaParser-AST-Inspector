@@ -1,1 +1,1 @@
-rootProject.name = "JavaParser AST Inspector"
+rootProject.name = "JavaParser AST Inspector Shadow"

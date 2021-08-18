@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.github.rogerhowell.JavaCodeBrowser</id>
-    <name>JavaParser AST Inspector</name>
+    <name>JavaParser AST Inspector Shadow</name>
     <vendor email="mysteraitch@users.noreply.github.com" url="https://github.com/MysterAitch">Roger Howell</vendor>
 
     <!-- DESCRIPTION IS INJECTED (PATCHED IN) DURING THE RELEASE PROCESS, WITH OTHER VARIABLES TOO. -->
@@ -18,7 +18,7 @@
     <!-- https://www.jetbrains.org/intellij/sdk/docs/user_interface_components/tool_windows.html -->
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <toolWindow id="JavaParser AST Inspector"
+        <toolWindow id="JavaParser AST Inspector Shadow"
                     anchor="bottom"
                     secondary="false"
                     icon="/JavaCodeBrowser/graph icon -- 13x13.png"

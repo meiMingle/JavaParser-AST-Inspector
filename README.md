@@ -1,5 +1,5 @@
 
-# JavaParser AST Inspector
+# JavaParser AST Inspector Shadow
 
 <!-- Note: PLUGIN_ID=14245 -->
 ![Build](https://github.com/MysterAitch/JavaParser-AST-Inspector/workflows/Build/badge.svg)
@@ -12,9 +12,16 @@
 
 
 <!-- Plugin description -->
-Browse and navigate the Abstract Syntax Tree (AST) based on the Java code in your editor.
+This is a mirror project for [JavaParser AST Inspector](https://plugins.jetbrains.com/plugin/14245-javaparser-ast-inspector)
+The following is the description of the original project.
+```text
+-----------------------------------------------------------------------------------------
+Broswer and navigate the Abstract Syntax Tree (AST) based on the Java code in your editor.
 
 Uses JavaParser v3.20.2 which currently handles Java 1-15, with Java 16 coming soon!
+-----------------------------------------------------------------------------------------
+```
+
 <!-- Plugin description end -->
 
 
